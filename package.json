@@ -4,7 +4,10 @@
   "description": "Portfolio site for Hamish Williams",
   "repository": "https://github.com/HamishMW/portfolio.git",
   "author": "Hamish Williams",
-  "sideEffects": false,
+  "sideEffects": [
+    "*.css",
+    "three-stdlib/**"
+  ],
   "type": "module",
   "scripts": {
     "build": "remix vite:build",
