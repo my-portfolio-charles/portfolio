@@ -1,0 +1,1051 @@
+.adaptiveUI {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/* 修改内容区域的布局，参考PetPals的设置 */
+.contentSection {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 160px;
+  padding: 0 32px;        /* 改为与PetPals一致的padding */
+  max-width: 1200px;      /* 设置最大宽度 */
+  margin: 0 auto 80px;    /* 居中对齐 */
+}
+
+/* 移除mainContent的padding，因为现在由contentSection控制 */
+.mainContent {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;            /* 移除之前的padding */
+}
+
+/* 调整右侧内容区域 */
+.contentRight {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 40px;    /* 与PetPals保持一致 */
+}
+
+.slogan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 120px 0;   /* 移除水平padding */
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+.sloganSubtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 26px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.sloganTitle {
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  opacity: 0.2;
+  margin: 80px 0;
+}
+
+/* 移除多余的padding */
+.contentLeft {
+  padding-left: 0;
+}
+
+.infoBlock {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.infoTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.infoContent {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoList li {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+.infoList strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+ol.infoList {
+  list-style: decimal;
+  padding-left: 1.2em;
+}
+
+ol.infoList li {
+  padding-left: 0.3em;
+}
+
+.overviewBlock {
+  max-width: 640px;
+  position: relative;
+}
+
+.overviewTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.overviewText {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.overviewText strong {
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: linear-gradient(transparent 0%, rgba(255, 255, 255, 0.1) 40%);
+  padding: 0 2px;
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+  .mainContent,
+  .workshopContainer {
+    padding: 0 40px;
+  }
+  
+  .contentSection {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contentRight {
+    padding-left: 0;
+  }
+
+  .infoBlock {
+    margin-bottom: 20px;
+  }
+
+  .infoTitle {
+    font-size: 0.8125rem;
+  }
+
+  .infoList li {
+    font-size: 0.875rem;
+  }
+
+  .overviewBlock {
+    max-width: 100%;
+  }
+
+  .overviewText {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent,
+  .workshopContainer {
+    padding: 0 24px;
+  }
+
+  .sloganTitle {
+    font-size: 2.5rem;
+  }
+
+  .infoBlock {
+    margin-bottom: 16px;
+  }
+
+  .overviewText strong {
+    background: none;
+  }
+}
+
+/* Workshop Section Styles */
+.workshopContainer {
+  /* 删除所有相关样式 */
+}
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 20px;
+  width: 2px;
+  height: calc(100% - 40px);
+  background: var(--primary);
+  opacity: 0.8;
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 64px;
+  margin-bottom: 60px;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineStep {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--background);
+  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  z-index: 1;
+}
+
+.timelineContent {
+  position: relative;
+  background: var(--background);
+  padding: 0;
+  margin-top: 8px;
+}
+
+.timelineTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 16px 0;
+}
+
+.timelineText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 8px 0;
+  opacity: 0.8;
+}
+
+/* 时间线媒体容器 */
+.timelineMedia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;  /* 减小整体间距 */
+}
+
+/* Media caption styles */
+.mediaCaption {
+  font-size: 1rem;  /* 增大字号 */
+  color: var(--text-secondary);
+  text-align: left;  /* 左对齐 */
+  margin: 0 0 4px;  /* 减小下方间距 */
+  opacity: 0.75;  /* 稍微提高不透明度 */
+  max-width: 872px;
+  margin-left: 0;  /* 确保左对齐 */
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-style: italic;
+}
+
+.mediaCaption::before {
+  content: "*";
+  margin-right: 6px;
+  color: var(--text-secondary);
+  font-style: normal;  /* 星号不使用斜体 */
+}
+
+/* After Workshop Styles */
+.afterWorkshop {
+  margin-top: 80px;
+}
+
+.afterWorkshopItem {
+  margin-bottom: 60px;
+}
+
+.afterWorkshopItem:last-child {
+  margin-bottom: 0;
+}
+
+.afterWorkshopTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.afterWorkshopText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  opacity: 0.8;
+}
+
+/* Media Styles */
+.presentationPlaceholder,
+.prototypeGrid,
+.testingDesign,
+.testingResults {
+  padding: 40px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  background: var(--background);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.brainstormingBox {
+  padding: 48px;
+  border: 3px dashed var(--primary);
+  opacity: 0.9;
+  background: transparent;
+}
+
+.pdfViewer {
+  width: 70%;
+  height: 470px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--background);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pdfObject {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.pdfViewer p {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.pdfViewer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pdfViewer a:hover {
+  text-decoration: underline;
+}
+
+.discussionImage {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.discussionImage .image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .timelineStep {
+    width: 36px;
+    height: 36px;
+    font-size: 0.875rem;
+  }
+
+  .timelineItem {
+    padding-left: 56px;
+  }
+
+  .timeline::before {
+    left: 18px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .pdfViewer {
+    width: 85%;
+    height: 350px;
+  }
+
+  .discussionImage {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .timelineStep {
+    width: 32px;
+    height: 32px;
+    font-size: 0.875rem;
+  }
+
+  .timelineItem {
+    padding-left: 48px;
+    margin-bottom: 40px;
+  }
+
+  .timeline::before {
+    left: 16px;
+  }
+
+  .timelineTitle {
+    font-size: 1.25rem;
+  }
+
+  .timelineText {
+    font-size: 0.875rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .pdfViewer {
+    width: 100%;
+    height: 300px;
+  }
+
+  .discussionImage {
+    width: 100%;
+  }
+}
+
+.brainstormingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 24px 0;
+  width: 100%;
+}
+
+.paperA4 {
+  flex: 0 0 auto;
+  width: 32%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  padding: 0;
+  aspect-ratio: 1/1.414;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.paperImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Remove hover effects and transitions */
+.paperA4:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.paperGap {
+  width: 2px;
+  flex: 0 0 auto;
+}
+
+.paperTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.paperContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  padding: 0 16px;
+}
+
+.arrowContainer {
+  flex: 0 0 auto;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+}
+
+/* Remove old arrow styles */
+.arrow, .arrow::after, .arrowLine, .arrowCircle {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .brainstormingContainer {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .paperA4 {
+    width: 85%;
+  }
+
+  .arrowContainer {
+    transform: rotate(90deg);
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .paperA4 {
+    width: 100%;
+  }
+
+  .paperTitle {
+    font-size: 1.125rem;
+  }
+
+  .paperContent {
+    font-size: 0.875rem;
+  }
+}
+
+/* 修改粉色为更柔和的色调 */
+:root {
+  --soft-pink: #FFC0CB;  /* 更柔和的粉色 */
+}
+
+/* 修改布局结构，使用更灵活的方式 */
+.brainstormingRow {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);  /* 左侧固定，右侧自适应 */
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 872px;  /* 280px + 16px + (280px * 2 + 16px) = 872px，考虑了间隙 */
+}
+
+.brainstormingLeft {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: white;
+  width: 280px;
+  height: fit-content;
+}
+
+.brainstormingImage {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: contain;
+  vertical-align: bottom;
+}
+
+/* 报告图片样式 */
+.reportCard {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: white;
+  width: 280px;
+}
+
+.reportImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Optimize insight cards container */
+.insightCards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;  /* Reduced gap */
+  height: fit-content;
+}
+
+/* Compact card style */
+.insightCard {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;  /* Reduced padding */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;  /* Added small gap between elements */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #FFB6C1;
+}
+
+.insightHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;  /* Reduced margin */
+}
+
+.insightIcon {
+  font-size: 14px;  /* Smaller icon */
+}
+
+.insightTag {
+  font-size: 0.625rem;  /* Smaller tag text */
+  color: var(--soft-pink);
+}
+
+.insightTitle {
+  font-size: 0.875rem;  /* Smaller title */
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+  color: #1C1C1E;
+}
+
+.insightText {
+  font-size: 0.75rem;  /* Smaller body text */
+  line-height: 1.4;
+  margin-bottom: 4px;
+  color: #666;
+}
+
+.insightFooter {
+  margin-top: 4px;  /* Reduced margin */
+  padding-top: 4px;  /* Reduced padding */
+  border-top: 1px solid #eee;
+}
+
+.insightReference {
+  font-size: 0.625rem;  /* Smaller reference text */
+  color: #999;
+  margin-bottom: 1px;  /* Minimal margin */
+}
+
+/* 报告行布局 */
+.reportsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  gap: 16px;
+  justify-content: center;  /* 居中显示 */
+  width: 100%;
+  max-width: 872px;  /* 与上方内容保持一致 */
+  margin: 0 auto;  /* 水平居中 */
+}
+
+/* Prototype Section Styles */
+.prototypeSection {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 32px;
+}
+
+.bigTitle {
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 48px;
+  color: var(--text-primary);
+}
+
+.prototypeDescription {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.confidentialNote {
+  position: relative;
+  padding: 8px 16px;
+  margin: 0;  /* 移除自身的 margin */
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  background: var(--background-light);
+  border-radius: 4px;
+  line-height: 1.5;
+  opacity: 0.8;
+  font-style: italic;  /* 保持倾斜 */
+}
+
+.confidentialNote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: oklch(65.02% 0.173 194.77);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.prototypesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;  /* 更小的间距 */
+  margin: 32px 0;
+}
+
+.prototypeCard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;  /* 调整为更高的比例 */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.prototypeImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* 改回 cover 以填充整个容器 */
+  filter: blur(12px);  /* 增加模糊程度 */
+  opacity: 0.8;  /* 降低不透明度 */
+  transform: scale(1.1);  /* 稍微放大以避免模糊边缘 */
+  background: rgba(0, 0, 0, 0.3);  /* 加深背景 */
+}
+
+.prototypeCaption {
+  position: absolute;
+  bottom: 12px;  /* 稍微往下移 */
+  left: 12px;
+  color: white;
+  font-size: 0.7rem;  /* 更小的字号 */
+  font-weight: 300;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);  /* 加强文字阴影 */
+  text-align: left;
+  max-width: 90%;
+  line-height: 1.4;
+  opacity: 0.75;  /* 更透明 */
+}
+
+/* Testing Section Styles */
+.testingSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 160px auto 0;  /* 增加上边距从0改为160px */
+  padding: 0;
+}
+
+.testingDescription {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 48px 0;
+  max-width: 100%;
+}
+
+/* 全新的数据可视化样式 */
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin: 32px auto;  /* 改为auto实现水平居中 */
+  align-items: start;
+  max-width: 872px;  /* 设置最大宽度，与其他内容保持一致 */
+}
+
+/* 调整卡片内部的padding和宽度 */
+.metricCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  background: var(--background-light);
+  border-radius: 16px;
+  height: 100%;
+  width: 100%;  /* 确保卡片填充网格空间 */
+}
+
+.metricHeader {
+  text-align: center;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.metricValue {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.metricTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+/* 柱状图样式优化 */
+.barsContainer {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  margin: 18px auto 0; /* 从-8px改为8px，让柱状图往下移动 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barWrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  height: 100px;
+}
+
+.barGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 48px;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+.beforeBar {
+  height: 100px;
+  background: var(--primary);
+  opacity: 0.3;
+}
+
+.afterBar {
+  height: 63px;
+  background: var(--primary);
+  opacity: 0.8;
+}
+
+.barLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0px;  /* 从4px减小到2px */
+}
+
+.barCaption {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  margin-top: 0px;  /* 从4px减小到2px */
+}
+
+/* 环形图基础容器 */
+.progressRings {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  margin: -8px auto 0;
+}
+
+.ring {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ringSVG {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+/* 环形图样式 */
+.ringOuter {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 7;
+  opacity: 0.3;
+  transform-origin: center;
+  transition: stroke-dasharray 0.5s ease;
+}
+
+.ringInner {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 9;
+  opacity: 0.8;
+  transform-origin: center;
+  transition: stroke-dasharray 0.5s ease;
+}
+
+.ringCaption {
+  position: absolute;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 响应式布局调整 */
+@media (max-width: 1024px) {
+  .metricsRow {
+    gap: 32px;
+    padding: 0 24px;  /* 添加一些边距 */
+  }
+  
+  .metricValue {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .metricsRow {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 16px;
+  }
+  
+  .metricCard {
+    padding: 24px;
+  }
+}
+
+/* 调整timeline的布局 */
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;    /* 确保不会超出容器 */
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+  .contentSection,
+  .workshopContainer,
+  .testingSection {
+    padding: 0;  /* 移除padding */
+  }
+  
+  .contentSection {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentSection,
+  .workshopContainer,
+  .testingSection {
+    padding: 0;  /* 移除padding */
+  }
+}
+
+.sectionHeader {
+  margin: 0 0 24px;  /* 减小下方间距 */
+  padding: 0;
+  width: 100%;
+}
+
+.sectionContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 120px auto 0;  
+  padding: 0;  /* 移除padding */
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .sectionContainer {
+    margin-top: 80px;
+    padding: 0;  /* 移除padding */
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .testingSection {
+    margin: 120px auto 0;  /* 在移动端稍微减小上边距 */
+  }
+}
+
+.testingDescription strong,
+.sectionDescription strong {
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
