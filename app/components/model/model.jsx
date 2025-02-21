@@ -42,7 +42,7 @@ import {
 import { ModelAnimationType, deviceModels } from './device-models';
 import { throttle } from '~/utils/throttle';
 import styles from './model.module.css';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from 'three-stdlib';
 
 const MeshType = {
   Frame: 'Frame',
