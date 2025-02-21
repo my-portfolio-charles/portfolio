@@ -97,3 +97,20 @@ modelLoader.load = (url, onLoad, onProgress, onError) => {
     }
   );
 };
+
+// 新增检测函数
+export function isWebGLAvailable() {
+  try {
+    const canvas = document.createElement('canvas');
+    return !!(
+      window.WebGLRenderingContext && 
+      (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
+    );
+  } catch (e) {
+    return false;
+  }
+}
+
+window.addEventListener('error', (event) => {
+  console.error('WebGL Error:', event.error);
+});
