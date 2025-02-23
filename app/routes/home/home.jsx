@@ -1,7 +1,7 @@
 
-import matchingVideo from '~/assets/Matching.mov';
-import adaptiveUIMain from '../../assets/adaptive-ui/adaptive-ui-main.jpg';
-import adaptiveUIDetail from '../../assets/adaptive-ui/adaptive-ui-detail.jpg';
+import matchingVideo from '/assets/petpals/Matching.mov';
+import adaptiveUIMain from '/assets/adaptive-ui/adaptive-ui-main.jpg';
+import adaptiveUIDetail from '/assets/adaptive-ui/adaptive-ui-detail.jpg';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -10,16 +10,16 @@ import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
 import styles from './home.module.css';
 import { SectionTitle } from '~/components/section-title/section-title';
-import data4Image from '../../assets/homepage/data4_1.jpg';
-import data4_4Image from '../../assets/homepage/data4_4.jpg';
-import data5Image from '../../assets/homepage/data5_5.jpg';
-import data5_2Image from '../../assets/homepage/data5_2.jpg';
-import data6Image from '../../assets/homepage/data6_2.jpg';
-import data6_1Image from '../../assets/homepage/data6_1.jpg';
-import data7_1Image from '~/assets/fireboywatergirl/7.1.png';
-import data7Image from '~/assets/fireboywatergirl/7.2.png';
+import data4Image from '/assets/homepage/data4_1.jpg';
+import data4_4Image from '/assets/homepage/data4_4.jpg';
+import data5Image from '/assets/homepage/data5_5.jpg';
+import data5_2Image from '/assets/homepage/data5_2.jpg';
+import data6Image from '/assets/homepage/data6_2.jpg';
+import data6_1Image from '/assets/homepage/data6_1.jpg';
+import data7_1Image from '/assets/fireboywatergirl/7.1.png';
+import data7Image from '/assets/fireboywatergirl/7.2.png';
 import { Contact } from '../contact/contact';
-import bikelogo from '~/assets/bike-sharing/bikelogo.jpg';
+import bikelogo from '/assets/bike-sharing/bikelogo.jpg';
 
 // Prefetch draco decoader wasm
 export const links = () => {

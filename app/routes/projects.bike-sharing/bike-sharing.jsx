@@ -10,11 +10,11 @@ import { optimizeImage } from '~/utils/image-optimization';
 import styles from './bike-sharing.module.css';
 import projectStyles from '~/styles/project.module.css';
 
-import data5_1 from '~/assets/bike-sharing/data5_1.jpg';
-import data5_2 from '~/assets/bike-sharing/data5_2.jpg';
-import data5_3 from '~/assets/bike-sharing/data5_3.jpg';
-import data5_4 from '~/assets/bike-sharing/data5_4.jpg';
-import data5_5 from '~/assets/bike-sharing/data5_5.jpg';
+import data5_1 from '/assets/bike-sharing/data5_1.jpg';
+import data5_2 from '/assets/bike-sharing/data5_2.jpg';
+import data5_3 from '/assets/bike-sharing/data5_3.jpg';
+import data5_4 from '/assets/bike-sharing/data5_4.jpg';
+import data5_5 from '/assets/bike-sharing/data5_5.jpg';
 
 export const meta = () => {
   return baseMeta({

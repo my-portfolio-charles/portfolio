@@ -12,9 +12,9 @@ import { Suspense, lazy, useState } from 'react';
 import { cssProps, media } from '~/utils/style';
 import { useHydrated } from '~/hooks/useHydrated';
 import styles from './project-summary.module.css';
-import philipsLogo from '../../assets/adaptive-ui/Philips.png';
-import philipsSRCLogo from '../../assets/adaptive-ui/SRC.png';
-import bikelogo from '~/assets/bike-sharing/bikelogo.jpg';
+import philipsLogo from '/assets/adaptive-ui/Philips.png';
+import philipsSRCLogo from '/assets/adaptive-ui/SRC.png';
+import bikelogo from '/assets/bike-sharing/bikelogo.jpg';
 
 const Model = lazy(() =>
   import('~/components/model').then(module => ({ default: module.Model }))
@@ -36,7 +36,6 @@ export function ProjectSummary({
   ...rest
 }) {
   const [focused, setFocused] = useState(false);
-  // 如果还需要自己控制 modelLoaded 可以保留，但需要注意初始状态与服务器端渲染保持一致
   const [modelLoaded, setModelLoaded] = useState(false);
 
   const { theme } = useTheme();
@@ -81,6 +80,7 @@ export function ProjectSummary({
             </div>
           </div>
         )}
+
         {title === "Bike-Sharing in Epidemic Era" && (
           <div className={styles.projectLogos} data-visible={visible}>
             <div className={styles.logoWrapper} data-logo="bike">
@@ -162,10 +162,7 @@ export function ProjectSummary({
     );
   }
 
-  /**
-   * 统一把 3D Model 或图片渲染的部分都包裹在 suppressHydrationWarning 中
-   * 并用 Suspense fallback 替代原先的 Loader 条件渲染。
-   */
+
   function renderPreview(visible) {
     return (
       <div className={styles.preview}>
